@@ -1,0 +1,22 @@
+<div *ngIf="riderMilesList.length" class="mat-elevation-z3">
+    <div class="totalMiles">Total Club Miles: {{getTotalMiles() | number}}</div>
+    <mat-table #table [dataSource]="riderMilesDataSource">
+        <ng-container matColumnDef="rank">
+            <mat-header-cell *matHeaderCellDef> Rank </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.rank}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="miles">
+            <mat-header-cell *matHeaderCellDef> Miles </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.miles}} </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columns"></mat-row>
+    </mat-table>
+    <!-- <div *ngFor="let riderMiles of riderMilesList, let i=index">
+        #{{i+1}} {{riderMiles.firstName}} {{riderMiles.lastName}} {{riderMiles.totalMiles}}
+    </div> -->
+</div>
