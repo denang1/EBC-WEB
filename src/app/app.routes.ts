@@ -2,13 +2,6 @@ import { Routes } from '@angular/router';
 import { StatsComponent } from './stats/stats.component';
 
 export const routes: Routes = [
-    {
-        path: 'stats',
-        component: StatsComponent
-    },
-    {
-        path: '',
-        redirectTo: '/stats',
-        pathMatch: 'full'
-    }
+    { path: 'stats', component: StatsComponent },
+    { path: '', redirectTo: '/stats', pathMatch: 'full' }
 ]

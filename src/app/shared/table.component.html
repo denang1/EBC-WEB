@@ -1,0 +1,6 @@
+<div class="headerRow">
+    <div class="header" [ngStyle]="headerStyle" *ngFor="let header of headers">{{header | capitalize}}</div>
+</div>
+<div class="tableBody">
+    <table-cell-component [data]="element" *ngFor="let element of data"></table-cell-component>
+</div>

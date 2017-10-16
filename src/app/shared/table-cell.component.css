@@ -1,0 +1,10 @@
+.row {
+    width: 100%;
+    min-height: 48px;    
+}
+
+.col {
+    display: inline-block;
+    line-height: 48px;
+    text-align: center;
+}

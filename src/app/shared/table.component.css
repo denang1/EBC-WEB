@@ -1,0 +1,15 @@
+.headerRow {
+    width: 100%;
+    background-color: rgba(200, 200, 200, 1);
+    min-height: 48px;
+    font-weight: bold;
+    overflow: none;
+}
+.header {
+    display: inline-block;
+    line-height: 48px;
+    text-align: center;
+}
+.tableBody {
+    overflow: auto;
+}
