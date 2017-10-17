@@ -7,15 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TableComponent {
     @Input() dataSource: Object[] = [];
-    
+
     private headers: string[] = [];
     private data: string[][] = [];
     public headerStyle: any;
+    public cellWidth: string = "";
 
     public ngOnInit() {
         this.headers = this.getHeaders();
+        this.cellWidth = `${(window.innerWidth/this.headers.length)-6}px`;
         this.headerStyle = {
-            'width': `calc(100%/${this.headers.length})`
+            'width': this.cellWidth
         }
         this.data = this.getData();
         console.log(this.data);

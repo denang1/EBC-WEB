@@ -7,11 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TableCellComponent implements OnInit {
     @Input() data: string[] = [];
+    @Input() cellWidth: string = "";
     public colStyle: any = {};
 
     public ngOnInit() {
         this.colStyle = {
-            'width': `calc(100%/${this.data.length})`
+            'width': this.cellWidth
         };
     }
     

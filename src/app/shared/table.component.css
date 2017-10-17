@@ -1,6 +1,7 @@
 .headerRow {
     width: 100%;
-    background-color: rgba(200, 200, 200, 1);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid black;
     min-height: 48px;
     font-weight: bold;
     overflow: none;
@@ -11,5 +12,9 @@
     text-align: center;
 }
 .tableBody {
+    height: calc(100vh - 92px);
     overflow: auto;
+}
+::content >>> .evenCell > .row {
+    background-color: rgba(151, 239, 255, 0.35);
 }
